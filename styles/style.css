@@ -18,6 +18,7 @@ html {
   background-color: #1b1919;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -54,8 +55,8 @@ fieldset {
 }
 
 .content {
-  inline-size: 1140px;
-  block-size: 534px;
+  width: 1140px;
+  height: 534px;
   display: flex;
   align-items: flex-end;
   gap: 30px;
@@ -214,7 +215,7 @@ fieldset {
 
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: -3px;
 }
 
 /*найти*/
@@ -224,13 +225,12 @@ fieldset {
 }
 
 /*блок с посмотри в окно и видео*/
-
 .content__details {
   display: flex;
   flex-direction: column;
-  max-width: 399px;
-  height: 100%;
-  gap: 26px;
+  width: 399px;
+  /* height: 100%; */
+  gap: 20px;
 }
 
 .title {
@@ -250,13 +250,12 @@ fieldset {
 }
 
 /*карточки с видео*/
-
 .content__list {
   position: relative;
   display: flex;
   flex-direction: column;
   overflow: auto;
-  align-items: end;
+  align-items: flex-start;
   height: 300px;
 }
 
@@ -266,6 +265,7 @@ fieldset {
 }
 
 .content__list-item:not(:last-child) {
+  margin-top: 5px;
   margin-bottom: 30px;
 }
 
@@ -319,9 +319,8 @@ fieldset {
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: 6px;
   height: 100%;
+  line-height: 149%;
 }
 
 .content__video-card-title {
@@ -330,17 +329,16 @@ fieldset {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 30px */
   text-transform: uppercase;
   max-width: 200px;
 }
 
 .content__video-card-description {
   font-weight: 400;
-  line-height: 16.2px;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
 }
+
 /*Показать еще*/
 .more-button {
   width: 399px;
